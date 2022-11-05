@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import UIKit
+
+struct AboutFilmModel {
+    var title: String
+    var description: String
+    var image: String
+}

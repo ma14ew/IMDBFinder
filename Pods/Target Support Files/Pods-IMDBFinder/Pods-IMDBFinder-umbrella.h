@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_HW22_MVPVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_HW22_MVPVersionString[];
+FOUNDATION_EXPORT double Pods_IMDBFinderVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_IMDBFinderVersionString[];
 

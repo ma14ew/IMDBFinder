@@ -145,5 +145,7 @@ extension ViewController: TablePresenterOutput {
                 completion: nil
             )
         }
+        tableView.isHidden = true
+        enterText.isHidden = false
     }
 }

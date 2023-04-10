@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C89AAA25414DE9F7A513FC0 /* Pods_HW22_MVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2AEB540CB42257E35CE5EEF /* Pods_HW22_MVP.framework */; };
 		177EB29B2995801100C6C4D7 /* TablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EB29A2995801100C6C4D7 /* TablePresenter.swift */; };
 		178E33A729B156A900B7C1E7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178E33A629B156A900B7C1E7 /* Service.swift */; };
 		178E33AB29B93D8800B7C1E7 /* FilmViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178E33AA29B93D8800B7C1E7 /* FilmViewPresenter.swift */; };
@@ -19,9 +18,11 @@
 		17B2EF4E2995583E000078E8 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B2EF4D2995583E000078E8 /* CellView.swift */; };
 		17B2EF5029955888000078E8 /* AboutFilm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B2EF4F29955888000078E8 /* AboutFilm.swift */; };
 		17B2EF542995592C000078E8 /* FilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B2EF532995592C000078E8 /* FilmViewController.swift */; };
+		18955EA641995B3A0AD6B51C /* Pods_IMDBFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A23426DF36C760AC6CE9F1 /* Pods_IMDBFinder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EF9A7FCE866D8A50B7C41C4 /* Pods-IMDBFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDBFinder.debug.xcconfig"; path = "Target Support Files/Pods-IMDBFinder/Pods-IMDBFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		177EB29A2995801100C6C4D7 /* TablePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablePresenter.swift; sourceTree = "<group>"; };
 		178E33A629B156A900B7C1E7 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		178E33AA29B93D8800B7C1E7 /* FilmViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewPresenter.swift; sourceTree = "<group>"; };
@@ -35,9 +36,8 @@
 		17B2EF4D2995583E000078E8 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		17B2EF4F29955888000078E8 /* AboutFilm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutFilm.swift; sourceTree = "<group>"; };
 		17B2EF532995592C000078E8 /* FilmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewController.swift; sourceTree = "<group>"; };
-		97E76A700893650283F002A0 /* Pods-HW22_MVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW22_MVP.release.xcconfig"; path = "Target Support Files/Pods-HW22_MVP/Pods-HW22_MVP.release.xcconfig"; sourceTree = "<group>"; };
-		C2AEB540CB42257E35CE5EEF /* Pods_HW22_MVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HW22_MVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E60C631CD39FF1B1318F4129 /* Pods-HW22_MVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW22_MVP.debug.xcconfig"; path = "Target Support Files/Pods-HW22_MVP/Pods-HW22_MVP.debug.xcconfig"; sourceTree = "<group>"; };
+		93A23426DF36C760AC6CE9F1 /* Pods_IMDBFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMDBFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD0057C0B1F4257849038E69 /* Pods-IMDBFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDBFinder.release.xcconfig"; path = "Target Support Files/Pods-IMDBFinder/Pods-IMDBFinder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,13 +45,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C89AAA25414DE9F7A513FC0 /* Pods_HW22_MVP.framework in Frameworks */,
+				18955EA641995B3A0AD6B51C /* Pods_IMDBFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0415C654630502226C82DD35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93A23426DF36C760AC6CE9F1 /* Pods_IMDBFinder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		177EB29529957B0D00C6C4D7 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,13 +78,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		177EB29729957B3C00C6C4D7 /* App */ = {
+		177EB29729957B3C00C6C4D7 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
 				17B2EF3B299555A4000078E8 /* SceneDelegate.swift */,
 				17B2EF39299555A4000078E8 /* AppDelegate.swift */,
 			);
-			path = App;
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		178E33A829B16F5600B7C1E7 /* Service */ = {
@@ -102,7 +110,7 @@
 				17B2EF38299555A4000078E8 /* IMDBFinder */,
 				17B2EF37299555A4000078E8 /* Products */,
 				66741FF55DF5F821DE105B13 /* Pods */,
-				B1AE79AA9E0420B915456360 /* Frameworks */,
+				0415C654630502226C82DD35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,7 +125,7 @@
 		17B2EF38299555A4000078E8 /* IMDBFinder */ = {
 			isa = PBXGroup;
 			children = (
-				177EB29729957B3C00C6C4D7 /* App */,
+				177EB29729957B3C00C6C4D7 /* Scene */,
 				177EB29529957B0D00C6C4D7 /* TableView */,
 				178E33A929B16F6400B7C1E7 /* AboutFilmVC */,
 				178E33A829B16F5600B7C1E7 /* Service */,
@@ -132,18 +140,10 @@
 		66741FF55DF5F821DE105B13 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E60C631CD39FF1B1318F4129 /* Pods-HW22_MVP.debug.xcconfig */,
-				97E76A700893650283F002A0 /* Pods-HW22_MVP.release.xcconfig */,
+				0EF9A7FCE866D8A50B7C41C4 /* Pods-IMDBFinder.debug.xcconfig */,
+				BD0057C0B1F4257849038E69 /* Pods-IMDBFinder.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		B1AE79AA9E0420B915456360 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C2AEB540CB42257E35CE5EEF /* Pods_HW22_MVP.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,11 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17B2EF4A299555A6000078E8 /* Build configuration list for PBXNativeTarget "IMDBFinder" */;
 			buildPhases = (
-				6D1EE777E9E3A7ABD5DC427B /* [CP] Check Pods Manifest.lock */,
+				09D069C199427813492238CA /* [CP] Check Pods Manifest.lock */,
 				17B2EF32299555A4000078E8 /* Sources */,
 				17B2EF33299555A4000078E8 /* Frameworks */,
 				17B2EF34299555A4000078E8 /* Resources */,
-				248A94CFC0728DA70681145C /* [CP] Embed Pods Frameworks */,
+				9A4FF716571825D6C276C98E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,24 +214,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		248A94CFC0728DA70681145C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HW22_MVP/Pods-HW22_MVP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HW22_MVP/Pods-HW22_MVP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HW22_MVP/Pods-HW22_MVP-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6D1EE777E9E3A7ABD5DC427B /* [CP] Check Pods Manifest.lock */ = {
+		09D069C199427813492238CA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -246,11 +229,28 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HW22_MVP-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-IMDBFinder-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A4FF716571825D6C276C98E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IMDBFinder/Pods-IMDBFinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IMDBFinder/Pods-IMDBFinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IMDBFinder/Pods-IMDBFinder-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -402,7 +402,7 @@
 		};
 		17B2EF4B299555A6000078E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E60C631CD39FF1B1318F4129 /* Pods-HW22_MVP.debug.xcconfig */;
+			baseConfigurationReference = 0EF9A7FCE866D8A50B7C41C4 /* Pods-IMDBFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -431,7 +431,7 @@
 		};
 		17B2EF4C299555A6000078E8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97E76A700893650283F002A0 /* Pods-HW22_MVP.release.xcconfig */;
+			baseConfigurationReference = BD0057C0B1F4257849038E69 /* Pods-IMDBFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

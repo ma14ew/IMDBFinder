@@ -18,7 +18,7 @@ protocol TablePresenterInput {
 
 protocol TablePresenterOutput {
     func succes()
-    func failure(error: Error)
+    func failure()
 }
 
 class TablePresenter: TablePresenterInput {
@@ -37,6 +37,7 @@ class TablePresenter: TablePresenterInput {
             guard let self = self else { return }
             DispatchQueue.main.async {
                 guard let array = array else {
+                    self.view?.failure()
                     return
                 }
                 for item in 0..<array.count {

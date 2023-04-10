@@ -19,7 +19,11 @@ class FilmViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-   private lazy var photoImage: UIImageView = {
+    private lazy var activityIndicator: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView(frame: CGRect(x: 220, y: 220, width: 100, height: 100))
+        return view
+    }()
+    private lazy var photoImage: UIImageView = {
         let image = UIImageView()
         image.sizeToFit()
         return image
@@ -51,11 +55,20 @@ class FilmViewController: UIViewController {
         view.addSubview(photoImage)
         view.addSubview(titleText)
         view.addSubview(descriptionText)
+        view.addSubview(activityIndicator)
+        photoImage.isHidden = true
+        activityIndicator.startAnimating()
     }
     private func setupConstraints() {
         photoImage.snp.makeConstraints { make in
             make.top.equalTo(view.snp.top).inset(100)
-            make.centerX.equalTo(view.snp.centerX)
+            make.centerX.equalTo(view)
+            make.width.equalTo(200)
+            make.height.equalTo(300)
+        }
+        activityIndicator.snp.makeConstraints { make in
+            make.top.equalTo(view.snp.top).inset(100)
+            make.centerX.equalTo(view)
             make.width.equalTo(200)
             make.height.equalTo(300)
         }
@@ -84,6 +97,8 @@ extension FilmViewController: FilmViewPresenterOutput {
                     return
                 }
                 self.photoImage.image = image
+                self.activityIndicator.stopAnimating()
+                self.photoImage.isHidden = false
             }
         }
     }

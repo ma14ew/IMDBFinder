@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 3
         label.font = .boldSystemFont(ofSize: 15)
-        label.text = "Введите в строку поиска название фильма"
+        label.text = "Введите в строку поиска название фильма на английском языке"
         return label
     }()
     private lazy var activityIndicator: UIActivityIndicatorView = {
@@ -63,8 +63,10 @@ class ViewController: UIViewController {
             make.top.equalTo(view.safeAreaLayoutGuide)
         }
         enterText.snp.makeConstraints { make in
-            make.centerX.equalTo(view.snp.centerX)
-            make.centerY.equalTo(view.snp.centerY)
+            make.centerX.equalTo(view)
+            make.centerY.equalTo(view)
+            make.left.equalTo(view.snp.left).inset(10)
+            make.right.equalTo(view.snp.right).inset(10)
         }
         tableView.snp.makeConstraints { make in
             make.top.equalTo(searchBar.snp.bottom)
@@ -75,6 +77,17 @@ class ViewController: UIViewController {
             make.centerX.equalTo(view)
             make.centerY.equalTo(view)
         }
+    }
+    private func createAlert() -> UIAlertController {
+        let alert = UIAlertController(
+            title: "Ошибка",
+            message: "Не удалось загрузить данные",
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "Попробовать еще раз", style: .default, handler: {(action:UIAlertAction!) in
+            
+        }))
+        return alert
     }
 }
 
@@ -120,7 +133,17 @@ extension ViewController: TablePresenterOutput {
         activityIndicator.isHidden = true
         tableView.isHidden = false
     }
-    func failure(error: Error) {
-        print(error.localizedDescription)
+    func failure() {
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            let alert = self.createAlert()
+            self.present(
+                alert,
+                animated: true,
+                completion: nil
+            )
+        }
     }
 }

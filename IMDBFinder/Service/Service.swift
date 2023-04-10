@@ -15,22 +15,25 @@ protocol ServiceProtocol {
 
 class Service: ServiceProtocol {
     func getDataURL(title: String, completion: @escaping ([[String: String]]?, Error?) -> Void) {
-            let titleWithoutSpaces = title.replacingOccurrences(of: " ", with: "%20")
-            let notValidUrl = "https://imdb-api.com/API/Search/k_qzrg3gpg/"
-            let validUrl = notValidUrl + titleWithoutSpaces
-            let url = URL(string: validUrl)
-            let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
-                guard let data = data else {
-                    completion(nil, error)
-                    return
-                }
-                let someDictionaryJSON = try? JSONSerialization.jsonObject(with: data,
-                                                                options: .allowFragments) as? [String: Any]
-                let arrayOfFilms = someDictionaryJSON?["results"] as? [[String: String]]
-                completion(arrayOfFilms, error)
-            }
-            task.resume()
+        let titleWithoutSpaces = title.replacingOccurrences(of: " ", with: "%20")
+        let notValidUrl = "https://imdb-api.com/API/Search/k_qzrg3gpg/"
+        let validUrl = notValidUrl + titleWithoutSpaces
+        guard let url = URL(string: validUrl) else {
+            completion(nil, nil)
+            return
         }
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data else {
+                completion(nil, error)
+                return
+            }
+            let someDictionaryJSON = try? JSONSerialization.jsonObject(with: data,
+                                                                       options: .allowFragments) as? [String: Any]
+            let arrayOfFilms = someDictionaryJSON?["results"] as? [[String: String]]
+            completion(arrayOfFilms, error)
+        }
+        task.resume()
+    }
     func loadImage(urlString: String, completion: @escaping (UIImage?, Error?) -> Void) {
         let url = URL(string: urlString) ?? URL(string: "https://via.placeholder.com/150")
         let task = URLSession.shared.dataTask(with: url!) { (data, _, error) in
